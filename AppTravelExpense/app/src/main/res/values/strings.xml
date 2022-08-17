@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Project Travel Expense</string>
+    <string name="distance">Distância</string>
+    <string name="total_Kilometers">Total de quilômetros</string>
+    <string name="price">Preço</string>
+    <string name="price_Per_Liter">Preço por litro</string>
+    <string name="autonomy">Autonomia</string>
+    <string name="km_Per_Liter">Kms por litro</string>
+    <string name="value_Total">Seu gasto total será de:</string>
+    <string name="default_Result">R$ 0</string>
+    <string name="botton_Text">Calcular</string>
+</resources>
