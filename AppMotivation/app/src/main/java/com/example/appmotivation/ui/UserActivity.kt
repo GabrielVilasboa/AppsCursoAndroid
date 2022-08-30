@@ -1,11 +1,14 @@
-package com.example.appmotivation
+package com.example.appmotivation.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.appmotivation.R
 import com.example.appmotivation.databinding.ActivityUserBinding
+import com.example.appmotivation.infra.MotivationConstants
+import com.example.appmotivation.infra.SecurityPreferences
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -23,23 +26,18 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View) {
-        if(view.id == R.id.button_save){
+        if (view.id == R.id.button_save) {
             handleSave()
         }
-
     }
 
-    fun handleSave(){
+    private fun handleSave() {
         val name = binding.editName.text.toString()
-
-        if (name != ""){
-            SecurityPreferences(this).storeNameUser("USER_NAME", name)
-            startActivity(Intent(this, MainActivity::class.java))
+        if (name != "") {
+            SecurityPreferences(this).storeNameUser(MotivationConstants.KEY.USER_NAME, name)
             finish()
-        }else{
-            Toast.makeText(this, getString(R.string.insert_name), Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "Coloque um nome", Toast.LENGTH_SHORT).show()
         }
-
-
     }
 }

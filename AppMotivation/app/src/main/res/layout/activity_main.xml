@@ -2,9 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/layout"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
 
     <LinearLayout
@@ -15,29 +16,27 @@
         android:padding="4dp">
 
         <ImageView
-            android:id="@+id/image_all_texts"
+            android:id="@+id/image_all"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@drawable/ic_all_inclusive_2" />
 
         <ImageView
-            android:id="@+id/image_happy_texts"
-            android:layout_width="0dp"
+            android:id="@+id/image_happy"
+            android:layout_width="133dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="8dp"
             android:src="@drawable/ic_emotions_24" />
 
         <ImageView
-            android:id="@+id/image_motivation_texts"
+            android:id="@+id/image_sunny"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="6dp"
-            android:src="@drawable/ic_baseline_wb_sunny_24"
-
-            />
+            android:src="@drawable/ic_baseline_wb_sunny_24" />
 
     </LinearLayout>
 
@@ -54,13 +53,12 @@
     <TextView
         android:id="@+id/text_motivation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="256dp"
         android:layout_marginTop="128dp"
         android:fontFamily="@font/cardo"
         android:gravity="center"
         android:padding="32dp"
-        android:text="Riscos devem ser corridos e bla bla bla bla bla bla bla"
+
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -78,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="64dp"
         android:layout_gravity="center"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="128dp"
         android:backgroundTint="@color/purple_200"
         android:fontFamily="@font/cardo"
         android:text="nova frase"
