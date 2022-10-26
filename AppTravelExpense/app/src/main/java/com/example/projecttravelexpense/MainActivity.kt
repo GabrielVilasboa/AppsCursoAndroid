@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             totalValue.text = totalStr
         }else{
-            Toast.makeText(this, "Coloca informação ai irmão", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Preencha todos os dados", Toast.LENGTH_SHORT).show()
         }
     }
 }

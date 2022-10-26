@@ -35,12 +35,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         tradeText()
 
         //Eventos de Clique
+
         binding.buttonTradeText.setOnClickListener(this)
         binding.imageAll.setOnClickListener(this)
         binding.imageHappy.setOnClickListener(this)
         binding.imageSunny.setOnClickListener(this)
         binding.helloUser.setOnClickListener(this)
-
     }
 
     //Atualiza o nome do usuario na tela após coletar o nome do SharedPreferences
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.helloUser.text = "Olá, $name!"
     }
 
-    //muda a cor dos botões de acordo com o que está selecionado.
+    //Muda a cor dos botões de acordo com o que está selecionado.
     private fun handleFilter(id: Int) {
         binding.imageAll.setColorFilter(ContextCompat.getColor(this, R.color.black))
         binding.imageHappy.setColorFilter(ContextCompat.getColor(this, R.color.black))
@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    //troca o texto da tela.
+    //Troca o texto da tela.
     private fun tradeText() = Mock().getPhrase(categoryId).also { binding.textMotivation.text = it }
 }
 
